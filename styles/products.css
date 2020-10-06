@@ -19,3 +19,8 @@
 .corrupted {
     background-color: gold;
 }
+
+main-section {
+    display: flex;
+    flex-wrap: wrap;
+}
