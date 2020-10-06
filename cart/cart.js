@@ -1,11 +1,11 @@
 
 
 
-const cart = [{
+export const cart = [{
     id: 'pbrTall',
     quantity: 36,
 }, {
-    id: 'pbrTall',
+    id: '805Tall',
     quantity: 3,
 }, {
     id: 'pbrTall',
