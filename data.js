@@ -4,10 +4,9 @@ export const souls = [
         title: '14th century Islamic Scientist',
         name: 'Ala al-Dīn Ali ibn Muhammed',
         description: 'Developed astronomical physics providing proof of the earth\'s rotation.',
-        img: 'sunniScientist.jpg',
+        image: 'sunniScientist.jpg',
         price: 400000000,
         catagory: '14th Century',
-        corrupted: false,
     },
     // {
     //     id:'peseant',
