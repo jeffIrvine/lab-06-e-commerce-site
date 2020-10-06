@@ -20,7 +20,8 @@
     background-color: gold;
 }
 
-main-section {
+#list {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
 }
