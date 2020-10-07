@@ -43,3 +43,8 @@ export function findById(someArray, someId) {
         }
     }
 }
+
+export function calcLineItem(someQuantity, someAmount){
+    const subTotal = someQuantity * someAmount;
+    return subTotal;
+}

@@ -1,7 +1,7 @@
+import { beerRender, findById, calcLineItem } from '../utils.js';
 import { cart } from '../cart/cart.js';
 import { beers } from '../data.js';
 // IMPORT MODULES under test here:
-import { beerRender, findById } from '../utils.js';
 // import { example } from '../example.js';
 
 const test = QUnit.test;
@@ -49,4 +49,15 @@ test('testing my findById', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-//  alt="Islamic Scientist"
+
+test('testing my calcLineItem', (expect) => {
+    //Arrange 
+    const expected = 72;
+    // Set up your arguments and expectations
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = calcLineItem(cart[0].quantity, beers[0].price);
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);
+});
