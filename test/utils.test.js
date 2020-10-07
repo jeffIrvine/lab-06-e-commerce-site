@@ -1,5 +1,7 @@
+import { cart } from '../cart/cart.js';
+import { beers } from '../data.js';
 // IMPORT MODULES under test here:
-import { beerRender } from '../utils.js';
+import { beerRender, findById } from '../utils.js';
 // import { example } from '../example.js';
 
 const test = QUnit.test;
@@ -24,6 +26,27 @@ test('time to test a function', (expect) => {
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual.outerHTML, expected);
+});
+
+
+test('testing my findById', (expect) => {
+    //Arrange
+    const expected = {
+        id:'pbrTall',
+        name: 'Pabst Blue Ribbon',
+        description: 'ABV: 4.8 crisp classic lager',
+        image: 'pbr.jpg',
+        price: 2,
+        catagory: 'lager',
+    };
+    // Set up your arguments and expectations
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = findById(beers, expected.id);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);
 });
 
 //  alt="Islamic Scientist"

@@ -39,12 +39,4 @@ export const beers = [
         price: 4,
         catagory: 'IPA',
     },
-    {
-        id: 'easyJackTall',
-        name: 'Easy Jack',
-        description: 'Classic IPA',
-        image: 'pbr.jpg',
-        price: 4,
-        catagory: 'IPA',
-    },
 ];

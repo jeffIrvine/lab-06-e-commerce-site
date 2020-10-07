@@ -1,6 +1,3 @@
-
-
-
 export const cart = [{
     id: 'pbrTall',
     quantity: 36,
@@ -8,16 +5,13 @@ export const cart = [{
     id: '805Tall',
     quantity: 3,
 }, {
-    id: 'pbrTall',
+    id: 'bastardTall',
     quantity: 6,
 }, {
-    id: 'pbrTall',
+    id: 'rainierTall',
     quantity: 6,
 }, {
-    id: 'pbrTall',
+    id: 'easyJackTall',
     quantity: 12,
-}, {
-    id: 'pbrTall',
-    quantity: 24,
 }];
 

@@ -13,17 +13,6 @@ th {
 tr:nth-child(odd) {
     background: lightgray;
 }
-
-.total {
-    text-align: right;
-    padding: 5px;
-}
-
-.unstyle {
-    background-color: white;
-    border: none
-}
-
 .place-order {
     display: flex;
     justify-content:end;

@@ -1,4 +1,8 @@
 
+// import { beers } from './data.js';
+// import { cart } from './cart/cart.js';
+
+
 export function beerRender(beers) {
     const li = document.createElement('li');
     li.classList.add('beers');
@@ -30,7 +34,12 @@ export function beerRender(beers) {
     
     return li;
 }
-// const title = document.createElement('p');
-// title.classList.add('title');
-// title.textContent = beers.title;
-// li.appendChild(title);
+
+export function findById(someArray, someId) {
+    for (let i = 0; i < someArray.length; i++) {
+        const item = someArray[i];
+        if (item.id === someId) {
+            return item;
+        }
+    }
+}
