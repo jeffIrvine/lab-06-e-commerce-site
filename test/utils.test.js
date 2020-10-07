@@ -1,4 +1,4 @@
-import { beerRender, findById, calcLineItem } from '../utils.js';
+import { beerRender, findById, calcTotal } from '../utils.js';
 import { cart } from '../cart/cart.js';
 import { beers } from '../data.js';
 // IMPORT MODULES under test here:
@@ -50,14 +50,17 @@ test('testing my findById', (expect) => {
 });
 
 
-test('testing my calcLineItem', (expect) => {
-    //Arrange 
+test('testing my calcTotal', (expect) => {
+    const cart = [{
+        id: 'pbrTall',
+        quantity: 36,
+    }];
     const expected = 72;
     // Set up your arguments and expectations
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = calcLineItem(cart[0].quantity, beers[0].price);
+    const actual = calcTotal(cart, beers);
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.deepEqual(actual, expected);
+    expect.equal(actual, expected);
 });

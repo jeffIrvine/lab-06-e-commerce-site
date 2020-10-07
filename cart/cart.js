@@ -6,12 +6,12 @@ export const cart = [{
     quantity: 3,
 }, {
     id: 'bastardTall',
-    quantity: 6,
+    quantity: 1,
 }, {
     id: 'rainierTall',
-    quantity: 6,
+    quantity: 1,
 }, {
     id: 'easyJackTall',
-    quantity: 12,
+    quantity: 1,
 }];
 

@@ -28,7 +28,7 @@ export const beers = [
         name: 'Rainier',
         description: 'Light lager',
         image: 'pbr.jpg',
-        price: 1.50,
+        price: 2,
         catagory: 'lager',
     },
     {
