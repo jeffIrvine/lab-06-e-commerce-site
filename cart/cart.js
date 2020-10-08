@@ -1,28 +1,28 @@
-const { getFromLocalStorage, CART } = require("../renderUtils");
-
 import { beers } from '../data.js';
 import { beerCartRender } from '../cart/cartRenderUtil.js';
 import { findById } from '../utils.js';
-import { getFromLocalStorage, CART } from '../renderUtils.js'
+import { calcTotal } from '../cart/cart-utils.js';
+import { getFromLocalStorage, CART } from '../renderUtils.js';
 
 
+// import { getFromLocalStorage, CART } from '../renderUtils.js'
+const orderButton = document.getElementById('order-button');
+const table = document.querySelector('tbody');
 const cart = getFromLocalStorage(CART) || [];
 
 for (let i = 0; i < cart.length; i++) {
     const beer = cart[i];
 
-    if (beer.quantity >= 0) {
-        const tr = beerCartRender(beer);
-        table.appendChild(tr);
-    }
+
+    const tr = beerCartRender(beer);
+    table.appendChild(tr);
 }
 
-const total = calculateTotal(cart);
+const total = calcTotal(cart, beers);
 
 const totalCell = document.querySelector('.total');
 
 totalCell.textContent = `Total: $${total}`;
-
 
 
 orderButton.addEventListener('click', () => {
@@ -30,7 +30,7 @@ orderButton.addEventListener('click', () => {
     alert(stringyCart);
 
     localStorage.clear();
-    window.location.href = '/';
+    window.location.href = '../index.html';
 });
 
 

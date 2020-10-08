@@ -8,7 +8,7 @@ export const beers = [
         category: 'lager',
     },
     {
-        id:'fire805tall',
+        id:'fire805Tall',
         name: 'Firestone 805',
         description: 'Blonde Ale',
         image: 'pbr.jpg',
@@ -39,4 +39,19 @@ export const beers = [
         price: 4,
         category: 'IPA',
     },
+];
+
+export const cart = [
+    {
+        id: 'pbrTall',
+        quantity: 36,
+    },
+    {
+        id: 'fire805Tall',
+        quantity: 3,
+    },
+    {
+        id: 'bastardTall',
+        quantity: 3,
+    }
 ];

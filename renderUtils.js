@@ -1,5 +1,5 @@
 // import { cart } from './cart/cart';
-import { findById } from './utils';
+import { findById } from './utils.js';
 
 export const CART = 'CART';
 
