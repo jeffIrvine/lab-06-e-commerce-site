@@ -5,7 +5,7 @@ export const beers = [
         description: 'ABV: 4.8 crisp classic lager',
         image: 'pbr.jpg',
         price: 2,
-        catagory: 'lager',
+        category: 'lager',
     },
     {
         id:'805tall',
@@ -13,15 +13,15 @@ export const beers = [
         description: 'Blonde Ale',
         image: 'pbr.jpg',
         price: 3,
-        catagory: 'blonde',
+        category: 'blonde',
     },
     {
         id:'bastardTall',
-        name: 'Arogant Bastard',
+        name: 'Arrogant Bastard',
         description: 'Strong IPA',
         image: 'pbr.jpg',
         price: 6,
-        catagory: 'IPA',
+        category: 'IPA',
     },
     {
         id:'rainierTall',
@@ -29,7 +29,7 @@ export const beers = [
         description: 'Light lager',
         image: 'pbr.jpg',
         price: 2,
-        catagory: 'lager',
+        category: 'lager',
     },
     {
         id: 'easyJackTall',
@@ -37,6 +37,6 @@ export const beers = [
         description: 'Classic IPA',
         image: 'pbr.jpg',
         price: 4,
-        catagory: 'IPA',
+        category: 'IPA',
     },
 ];

@@ -1,6 +1,7 @@
 
-import { beers } from './data.js';
 import { cart } from './cart/cart.js';
+import { beers } from './data.js';
+// import { cart } from './cart/cart.js';
 
 
 export function beerRender(beers) {
@@ -35,6 +36,7 @@ export function beerRender(beers) {
     return li;
 }
 
+
 export function findById(someArray, someId) {
     for (let i = 0; i < someArray.length; i++) {
         const item = someArray[i];
@@ -44,14 +46,19 @@ export function findById(someArray, someId) {
     }
 }
 
-export function calcTotal(cartArray){
-    let accumulator = 0;
+export function calcLineItem(quantity, price) {
+    const subTotal = quantity * price;
+    return subTotal;
+}
+
+export function calcTotal(cartArray, beers){
+    let orderTotal = 0;
+
     for (let i = 0; i < cartArray.length; i++) {
-        const item = cartArray[i];
-        const actualItem = findById(beers, item.id);
-        const subTotal = actualItem.price * item.quantity;
-        accumulator = accumulator + subTotal;
-        console.log(accumulator);
+        const lineItem = cartArray[i];
+        const item = findById(beers, lineItem.id);
+        const lineTotal = calcLineItem(lineItem.quantity, item.price);
+        orderTotal += lineTotal;
     }
-    return accumulator;
+    return orderTotal;
 }
