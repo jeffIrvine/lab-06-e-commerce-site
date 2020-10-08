@@ -1,8 +1,7 @@
 import { findById } from '../utils.js';
 import { beerRender } from '../renderUtils.js';
-import { cart } from '../cart/cart.js';
 import { calcLineItem, calcTotal } from '../cart/cart-utils.js';
-import { beers } from '../data.js';
+import { beers, cart } from '../data.js';
 import { beerCartRender } from '../cart/cartRenderUtil.js';
 
 
