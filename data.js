@@ -8,8 +8,8 @@ export const beers = [
         category: 'lager',
     },
     {
-        id:'805tall',
-        name: '805',
+        id:'fire805tall',
+        name: 'Firestone 805',
         description: 'Blonde Ale',
         image: 'pbr.jpg',
         price: 3,

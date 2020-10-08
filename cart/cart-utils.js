@@ -1,30 +1,18 @@
-// import { beers } from '../data.js';
-// import { cart } from '../cart/cart.js';
-// import { calcLineItem, findById } from '../utils.js';
+import { findById } from '../utils.js';
 
 
-// export function beerCartRender(cartItem) {
-//     const tr = document.createElement('tr');
-//     const tdTitle = document.createElement('td');
-//     const tdPrice = document.createElement('td');
-//     const tdQuantity = document.createElement('td');
-//     const tdTotal = document.createElement('td');
-    
+export function calcLineItem(quantity, price) {
+    return quantity * price;
+}
 
-//     tdQuantity.textContent = cartItem.quantity;    
+export function calcTotal(cart, beer){
+    let orderTotal = 0;
 
-    
-//     const beersData = findById(cart, cart.id);
-//     console.log(beersData);
-    
-//     const price = (beersData.price).toFixed(2);
-//     const name = beersData.name;
-//     const total = calcLineItem(cartItem.quantity, price);
-    
-//     tdPrice.textContent = `$${price}`;
-//     tdTitle.textContent = name;
-//     tdTotal.textContent = `$${total}`;
-
-//     tr.append(tdTitle, tdPrice, tdQuantity, tdTotal);
-//     return tr;
-// }
+    for (let i = 0; i < cart.length; i++) {
+        const lineItem = cart[i];
+        const item = findById(beer, lineItem.id);
+        const lineTotal = calcLineItem(lineItem.quantity, item.price);
+        orderTotal += lineTotal;
+    }
+    return orderTotal;
+}

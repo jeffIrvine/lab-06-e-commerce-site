@@ -1,7 +1,10 @@
-import { beerRender, findById } from '../utils.js';
+import { findById } from '../utils.js';
+import { beerRender } from '../renderUtils.js';
 import { cart } from '../cart/cart.js';
+import { calcLineItem, calcTotal } from '../cart/cart-utils.js';
 import { beers } from '../data.js';
-import { calcLineItem, calcTotal } from '../utils.js';
+import { beerCartRender } from '../cart/cartRenderUtil.js';
+
 
 
 const test = QUnit.test;
@@ -76,21 +79,21 @@ test('testing my calcTotal', (expect) => {
 });
 
 
-// test('testing my beerCartRender', (expect) => {
+test('testing my beerCartRender', (expect) => {
 
-//     const cart = {
-//         id: 'pbrTall',
-//         quantity: 36,
-//     };
+    const cart = {
+        id: 'pbrTall',
+        quantity: 36,
+    };
 
-//     const expected = '<tr><td>Pabst Blue Ribbon</td><td>$2.00</td><td>36</td><td>$72.00</td></tr>';
-//     // Set up your arguments and expectations
-//     // Call the function you're testing and set the result to a const
-//     const actual = beerCartRender(cart);
-//     //Expect
-//     // Make assertions about what is expected versus the actual result
-//     expect.equal(actual.outerHTML, expected);
-// });
+    const expected = '<tr><td>Pabst Blue Ribbon</td><td>$2.00</td><td>36</td><td>$72.00</td></tr>';
+    // Set up your arguments and expectations
+    // Call the function you're testing and set the result to a const
+    const actual = beerCartRender(cart);
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual.outerHTML, expected);
+});
 
 
 
