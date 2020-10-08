@@ -1,3 +1,7 @@
+// import { cart } from './cart/cart';
+import { findById } from './utils';
+
+export const CART = 'CART';
 
 export function beerRender(beers) {
     const li = document.createElement('li');
@@ -25,8 +29,39 @@ export function beerRender(beers) {
     
     const button = document.createElement('button');
     button.textContent = 'Add to beer container';
+
+    button.addEventListener('click', () => {
+
+        const cart = getFromLocalStorage('CART') || [];
+        const itemInCart = findById(cart, beers.id);
+
+        if (itemInCart === undefined) {
+            const newCartItem = {
+                id: beers.id,
+                quantity: 1
+            };
+            cart.push(newCartItem);
+        } else {
+            itemInCart.quantity++;
+        }
+        setInLocalStorage(CART, cart);
+    });
+
     li.appendChild(button);
     
-    
     return li;
+}
+
+export function getFromLocalStorage(key) {
+    const item = localStorage.getItem(key);
+
+    return JSON.parse(item);
+}
+
+export function setInLocalStorage(key, value) {
+    const stringyItem = JSON.stringify(value);
+
+    localStorage.setItem(key, stringyItem);
+
+    return value;
 }

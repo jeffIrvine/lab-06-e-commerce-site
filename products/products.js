@@ -1,5 +1,5 @@
 import { beers } from '../data.js';
-import { beerRender } from '../utils.js';
+import { beerRender } from '../renderUtils.js';
 
 const ul = document.querySelector('#list');
 
