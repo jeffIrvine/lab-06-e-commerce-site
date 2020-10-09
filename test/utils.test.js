@@ -84,6 +84,21 @@ test('testing my beerCartRender', (expect) => {
 });
 
 
+test('testing my addProduct', (expect) => {
+
+    const cart = {
+        id: 'pbrTall',
+        quantity: 36,
+    };
+
+    const expected = '<tr><td>Pabst Blue Ribbon</td><td>$2.00</td><td>36</td><td>$72.00</td></tr>';
+
+    const actual = beerCartRender(cart);
+
+    expect.equal(actual.outerHTML, expected);
+});
+
+
 
 
 

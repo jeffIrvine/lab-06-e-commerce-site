@@ -1,5 +1,6 @@
 import { PRODUCTS } from '../constants.js';
-import { beers as hardCodedBeers } from '../data.js';
+import { beers } from '../data.js';
+import { setInLocalStorage } from './renderUtils.js';
 
 
 export function findById(someArray, someId) {
@@ -10,16 +11,22 @@ export function findById(someArray, someId) {
         }
     }
 }
+export function addBeers(myObject) {
 
+    const productArray = getLocalStorageBeers(PRODUCTS);
+    productArray.push(myObject);
+
+    setInLocalStorage(PRODUCTS, productArray);
+}
 
 export function getLocalStorageBeers() {
     let localStorageBeers = JSON.parse(localStorage.getItem(PRODUCTS));
 
     if (!localStorageBeers) {
-        const stringyBeers = JSON.stringify(hardCodedBeers);
+        const stringyBeers = JSON.stringify(beers);
 
         localStorage.setItem(PRODUCTS, stringyBeers);
-        localStorageBeers = hardCodedBeers;
+        localStorageBeers = beers;
     }
     return localStorageBeers;
 }
