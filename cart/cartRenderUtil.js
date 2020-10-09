@@ -1,7 +1,8 @@
-import { beers } from '../data.js';
 import { calcLineItem } from '../cart/cart-utils.js';
 import { findById } from '../utils.js';
+import { getLocalStorageBeers } from '../utils.js';
 
+const localStorageBeers = getLocalStorageBeers();
 
 export function beerCartRender(cartItem) {
     const tr = document.createElement('tr');
@@ -12,7 +13,7 @@ export function beerCartRender(cartItem) {
 
     tdQuantity.textContent = cartItem.quantity;
 
-    const beerData = findById(beers, cartItem.id);
+    const beerData = findById(localStorageBeers, cartItem.id);
 
     const price = (beerData.price).toFixed(2);
     const name = beerData.name;

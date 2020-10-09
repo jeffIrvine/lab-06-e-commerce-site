@@ -41,6 +41,7 @@ export const beers = [
     },
 ];
 
+// only here for testing
 export const cart = [
     {
         id: 'pbrTall',
