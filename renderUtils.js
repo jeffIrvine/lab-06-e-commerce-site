@@ -1,7 +1,7 @@
 // import { cart } from './cart/cart';
 import { findById } from './utils.js';
+import { CART } from './constants.js';
 
-export const CART = 'CART';
 
 export function beerRender(beers) {
     const li = document.createElement('li');
