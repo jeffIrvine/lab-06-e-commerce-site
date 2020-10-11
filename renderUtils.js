@@ -28,7 +28,7 @@ export function beerRender(beers) {
     li.appendChild(price);
     
     const button = document.createElement('button');
-    button.textContent = 'Add to beer container';
+    button.textContent = 'Add to my six pack!';
 
     button.addEventListener('click', () => {
 

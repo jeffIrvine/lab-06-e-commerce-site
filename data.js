@@ -5,7 +5,7 @@ export const beers = [
         description: 'ABV: 4.8 crisp classic lager',
         image: 'pbr.jpg',
         price: 2,
-        category: 'lager',
+        category: 'Lager',
     },
     {
         id:'fire805Tall',
@@ -13,7 +13,7 @@ export const beers = [
         description: 'Blonde Ale',
         image: 'pbr.jpg',
         price: 3,
-        category: 'blonde',
+        category: 'Blonde',
     },
     {
         id:'bastardTall',
@@ -29,7 +29,7 @@ export const beers = [
         description: 'Light lager',
         image: 'pbr.jpg',
         price: 2,
-        category: 'lager',
+        category: 'Lager',
     },
     {
         id: 'easyJackTall',
@@ -39,6 +39,14 @@ export const beers = [
         price: 4,
         category: 'IPA',
     },
+    {
+        id: 'amarilloTall',
+        name: 'Amarillo Pale Ale',
+        description: 'Fresh hop pale ale',
+        image: 'pbr.jpg',
+        price: 6,
+        category: 'Pale',
+    }
 ];
 
 // only here for testing
