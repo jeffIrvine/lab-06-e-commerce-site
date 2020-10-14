@@ -14,8 +14,7 @@ const cart = getFromLocalStorage(CART) || [];
 
 for (let i = 0; i < cart.length; i++) {
     const beer = cart[i];
-
-
+    
     const tr = beerCartRender(beer);
     table.appendChild(tr);
 }

@@ -15,14 +15,14 @@ export function beerCartRender(cartItem) {
 
     const beerData = findById(localStorageBeers, cartItem.id);
 
-    const price = (beerData.price).toFixed(2);
+    const price = beerData.price;
     const name = beerData.name;
 
     tdPrice.textContent = `$${price}`;
     tdName.textContent = name;
 
     const total = calcLineItem(cartItem.quantity, beerData.price).toFixed(2);
-    
+
     tdTotal.textContent = `$${total}`;
 
     tr.append(tdName, tdPrice, tdQuantity, tdTotal);
