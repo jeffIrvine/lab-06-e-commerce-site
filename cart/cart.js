@@ -2,8 +2,9 @@ import { getLocalStorageBeers } from '../utils.js';
 import { beerCartRender } from './cartRenderUtil.js';
 import { calcTotal } from '../cart/cart-utils.js';
 import { getFromLocalStorage } from '../renderUtils.js';
-import { CART } from '../constants.js';
 
+
+const CART = 'CART';
 
 const localStorageBeers = getLocalStorageBeers();
 

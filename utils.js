@@ -1,7 +1,7 @@
-import { PRODUCTS } from '../constants.js';
 import { beers } from '../data.js';
 import { setInLocalStorage } from './renderUtils.js';
 
+const PRODUCTS = 'PRODUCTS';
 
 export function findById(someArray, someId) {
     for (let i = 0; i < someArray.length; i++) {
