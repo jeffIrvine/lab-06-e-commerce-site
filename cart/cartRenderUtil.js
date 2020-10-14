@@ -1,4 +1,4 @@
-import { calcLineItem } from '../cart/cart-utils.js';
+import { calcLineItem } from './cart-utils.js';
 import { findById } from '../utils.js';
 import { getLocalStorageBeers } from '../utils.js';
 
