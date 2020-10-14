@@ -1,4 +1,4 @@
-import { beers } from '../data.js';
+import { beers } from './data.js';
 import { setInLocalStorage } from './renderUtils.js';
 
 const PRODUCTS = 'PRODUCTS';
